@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:10:44 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:35:18 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/24 16:55:30 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,13 @@ void	dump(t_stack *a, t_stack *b	)
 	while (biggest > -1)
 	{
 		a->top ? ft_putnbr(a->s[biggest]) : ft_putstr(" ");
-		ft_putchar(' ');
+		ft_putstr("\t\t");
 		b->top ? ft_putnbr(b->s[biggest]) : ft_putstr(" ");
 		ft_putstr("\n");
 		biggest--;
 	}
 	ft_putstr("\n");
-	ft_putstr("- -\n");
-	ft_putstr("a b\n");
+	ft_putstr("-\t\t-\n");
+	ft_putstr("\033[1;32;40ma\t\t");
+	ft_putstr("\033[1;31;40mb\n");
 }
