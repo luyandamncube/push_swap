@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 14:23:41 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/24 16:24:47 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@ typedef	struct	s_stack
 {
 	int			*s;
 	int			top;
+	int			name;
 }				t_stack;
 
-void			initialize(t_stack **new);
+void			initialize(t_stack **new, int name);
 int				pop(t_stack *current);
 void			swap(t_stack *current);
 int				peek(t_stack *current);
 void			push(int temp, t_stack *current);
 void			swap(t_stack *current);
-void			dump(t_stack *current);
+void			dump(t_stack *a, t_stack *b);
 void			rot(t_stack *current);
 void			rev_rot(t_stack *current);
 void			free_all(t_stack **current);
