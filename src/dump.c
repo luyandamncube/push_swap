@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   dump.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/24 11:10:44 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/24 13:03:28 by lmncube          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void	dump(stack *current)
+void	dump(t_stack *current)
 {
 	int	k;
 
@@ -8,7 +20,7 @@ void	dump(stack *current)
 	while (k < current->top)
 	{
 		ft_putnbr(current->s[k]);
-		ft_putstr("\n");;
+		ft_putstr("\n");
 		k++;
 	}
 }

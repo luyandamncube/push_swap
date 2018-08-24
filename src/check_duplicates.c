@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot.c                                              :+:      :+:    :+:   */
+/*   check_duplicates.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/24 11:14:14 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 13:04:10 by lmncube          ###   ########.fr       */
+/*   Created: 2018/08/24 11:44:17 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/24 14:36:33 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rot(t_stack *current)
+int		check_duplicates(t_stack *input)
 {
-	t_stack	*temp;
-	int		store;
-	int		k;
+	int 	k[2];
 
-	store = pop(current);
-	k = current->top;
-	initialize(&temp);
-	while (k > 0)
+	k[0] = 0;
+	while (k[0] < input->top)
 	{
-		temp->s[temp->top++] = pop(current);
-		k--;
+		k[1] = k[0] + 1;
+		while (k[1] < input->top)
+		{
+			if (input->s[k[0]] == input->s[k[1]])
+				return (1);
+			k[1]++;
+		}
+		k[0]++;
 	}
-	push(store, current);
-	k = temp->top;
-	while (k > 0)
-	{
-		current->s[current->top++] = pop(temp);
-		k--;
-	}
+	return (0);
 }

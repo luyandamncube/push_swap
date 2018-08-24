@@ -1,44 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/24 15:02:37 by lmncube          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	main(int argc, char **argv)
 {
-	stack *one; 
-	int	k;
+	t_stack	*stack_a; 
+	t_stack	*stack_b; 
+	t_stack	*input_stack; 
+	int		input[4096];
+	int		size;
+	int		k;
 
+	size = argc - 1;
 	k = 0;
-	initialize(&one);	
-	
-	push(3, one);
-	push(6, one);
-	push(-1, one);
-	push(8, one);
-	push(9, one);
-	push(1, one);
-	
-	printf("BEFORE rot\n");	
-	dump(one);
-	
-	printf("AFTER rot \n");	
-	rot(one);
-	dump(one);
-	
-	printf("BEFORE rev_rot \n");	
-	dump(one);
-	
-	printf("AFTER rev_rot \n");	
-	rev_rot(one);
-	dump(one);
-	
-	printf("BEFORE swap \n");	
-	dump(one);
-
-	printf("AFTER swap \n");	
-	swap(one);
-	dump(one);
-	
-	printf("FREE\n");	
-	free_all(&one);
-	//dump(one);
-
+	//check_integers
+	initialize(&input_stack);	
+	if (argc > 1)
+	{
+		while (argc > 1)
+		{
+			push(ft_atoi(argv[k + 1]), input_stack);
+			k++;
+			argc--;
+		}
+		if (check_duplicates(input_stack))
+			ft_putstr("Error\n");
+	}
 	return (0);
 }

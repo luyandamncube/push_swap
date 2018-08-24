@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rev_rot.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/24 11:18:39 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/24 13:02:47 by lmncube          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    rev_rot(stack *current)
+void	rev_rot(t_stack *current)
 {
-	stack   *temp;
-	int     store;
-	int     k;
+	t_stack	*temp;
+	int		store;
+	int		k;
 
 	k = current->top;
 	initialize(&temp);
@@ -20,6 +32,5 @@ void    rev_rot(stack *current)
 		current->s[current->top++] = pop(temp);
 		k--;
 	}
-	push(store,current);
+	push(store, current);
 }
-
