@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:18:39 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 13:02:47 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/24 16:17:23 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	rev_rot(t_stack *current)
 	int		k;
 
 	k = current->top;
-	initialize(&temp);
+	initialize(&temp, 0);
 	while (k > 1)
 	{
 		temp->s[temp->top++] = pop(current);
@@ -33,4 +33,5 @@ void	rev_rot(t_stack *current)
 		k--;
 	}
 	push(store, current);
+	free(temp);
 }

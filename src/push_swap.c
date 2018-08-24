@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 15:02:37 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/24 16:26:17 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,26 @@ int	main(int argc, char **argv)
 
 	size = argc - 1;
 	k = 0;
-	//check_integers
-	initialize(&input_stack);	
+	initialize(&stack_a, 'a');	
+	initialize(&stack_b, 'b');	
 	if (argc > 1)
 	{
 		while (argc > 1)
 		{
-			push(ft_atoi(argv[k + 1]), input_stack);
+			if (ft_isnum(argv[k + 1]))
+				push(ft_atoi(argv[k + 1]), stack_a);
+			else
+			{
+				ft_putstr("Error\n");
+				exit (1);
+			}
 			k++;
 			argc--;
-		}
-		if (check_duplicates(input_stack))
-			ft_putstr("Error\n");
+		}	
+		dump(stack_a, stack_b);
+		printf("stack %c\n", stack_a->name);	
 	}
+	if (check_duplicates(stack_a))
+		ft_putstr("Error\n");
 	return (0);
 }
