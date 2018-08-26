@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:43:37 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 12:09:31 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a; 
 	t_stack	*stack_b; 
-	int		input[4096];
+	//int		input[4096];
 	int		size;
 	int		k;
 
@@ -41,7 +41,13 @@ int	main(int argc, char **argv)
 		if (check_duplicates(stack_a))
 			ft_putstr("Error\n");
 		else
+		{
+			push_to(stack_b, stack_a);
+			push_to(stack_b, stack_a);
+			push_to(stack_b, stack_a);
+			rot_both(stack_a, stack_b);
 			dump(stack_a, stack_b);
+		}
 	}
 	free(stack_a);
 	free(stack_b);

@@ -9,7 +9,9 @@ FILENAMES 	= check_duplicates.c \
 			  push_swap.c \
 			  push_to.c \
 			  rev_rot.c \
+			  rev_rot_both.c \
 			  rot.c \
+			  rot_both.c \
 			  swap.c \
 
 HDIR     	= ./includes
