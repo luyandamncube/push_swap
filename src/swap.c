@@ -6,13 +6,13 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:22:22 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:17:30 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 12:27:43 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_stack *current)
+int		swap(t_stack *current)
 {
 	int	temp1;
 	int	temp2;
@@ -21,4 +21,8 @@ void	swap(t_stack *current)
 	temp2 = pop(current);
 	push(temp1, current);
 	push(temp2, current);
+	if (current->name == 'a')
+		return (1);
+	else
+		return (2);
 }

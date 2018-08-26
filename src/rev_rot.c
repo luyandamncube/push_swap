@@ -6,13 +6,13 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:18:39 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:17:23 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 12:48:31 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rev_rot(t_stack *current)
+int		rev_rot(t_stack *current)
 {
 	t_stack	*temp;
 	int		store;
@@ -34,4 +34,8 @@ void	rev_rot(t_stack *current)
 	}
 	push(store, current);
 	free(temp);
+	if (current->name == 'a')
+		return (9);
+	else
+		return (10);
 }

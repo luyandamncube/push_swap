@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:09:31 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 12:52:06 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,12 @@ int	main(int argc, char **argv)
 			ft_putstr("Error\n");
 		else
 		{
-			push_to(stack_b, stack_a);
-			push_to(stack_b, stack_a);
-			push_to(stack_b, stack_a);
-			rot_both(stack_a, stack_b);
+			printf("push b %d\n", push_to(stack_b, stack_a));
+			printf("push b %d\n", push_to(stack_b, stack_a));
+			printf("push b %d\n", push_to(stack_b, stack_a));
+			printf("rev rot a %d\n", rev_rot(stack_a));
+			printf("rev rot both %d\n", rev_rot_both(stack_a, stack_b));
+			
 			dump(stack_a, stack_b);
 		}
 	}

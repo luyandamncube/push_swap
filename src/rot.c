@@ -6,13 +6,13 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:14:14 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:17:45 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 12:42:07 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rot(t_stack *current)
+int		rot(t_stack *current)
 {
 	t_stack	*temp;
 	int		store;
@@ -34,4 +34,8 @@ void	rot(t_stack *current)
 		k--;
 	}
 	free(temp);
+	if (current->name == 'a')
+		return (6);
+	else	
+		return (7);
 }
