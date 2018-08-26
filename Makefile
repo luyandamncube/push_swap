@@ -14,6 +14,7 @@ FILENAMES 	= check_duplicates.c \
 			  rot_both.c \
 			  swap.c \
 			  swap_both.c \
+			  algo_1.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src

@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:52:06 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 13:37:35 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a; 
 	t_stack	*stack_b; 
-	//int		input[4096];
 	int		size;
 	int		k;
 
@@ -42,12 +41,7 @@ int	main(int argc, char **argv)
 			ft_putstr("Error\n");
 		else
 		{
-			printf("push b %d\n", push_to(stack_b, stack_a));
-			printf("push b %d\n", push_to(stack_b, stack_a));
-			printf("push b %d\n", push_to(stack_b, stack_a));
-			printf("rev rot a %d\n", rev_rot(stack_a));
-			printf("rev rot both %d\n", rev_rot_both(stack_a, stack_b));
-			
+			algo_1(stack_a, stack_b);	
 			dump(stack_a, stack_b);
 		}
 	}

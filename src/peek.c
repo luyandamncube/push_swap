@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:17:31 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 13:01:23 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 13:42:28 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		peek(t_stack *current)
 {
-	return (current->s[current->top - 1]);
+	if (current->top)
+		return (current->s[current->top - 1]);
+	return (0);
 }

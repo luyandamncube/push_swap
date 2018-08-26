@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:52:36 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/26 14:50:19 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int				rev_rot(t_stack *current);
 int	    		rev_rot_both(t_stack *a, t_stack *b);
 void			free_all(t_stack **current);
 int				check_duplicates(t_stack *input);
+void    		algo_1(t_stack *a, t_stack *b);
 
 #endif
