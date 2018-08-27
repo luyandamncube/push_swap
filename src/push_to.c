@@ -21,7 +21,13 @@ int		push_to(t_stack *dest, t_stack *src)
 	dest->s[dest->top] = temp;
 	dest->top++;
 	if (dest->name == 'a')
+	{
+		init_score(dest);
 		return (4);
+	}
 	else
+	{
+		init_score(src);
 		return (5);
+	}
 }

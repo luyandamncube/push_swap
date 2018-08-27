@@ -20,20 +20,15 @@ int		rev_rot(t_stack *current)
 
 	k = current->top;
 	initialize(&temp, 0);
-	while (k > 1)
-	{
+	while (k-- > 1)
 		temp->s[temp->top++] = pop(current);
-		k--;
-	}
 	store = pop(current);
 	k = temp->top;
-	while (k > 0)
-	{
+	while (k-- > 0)
 		current->s[current->top++] = pop(temp);
-		k--;
-	}
 	push(store, current);
 	free(temp);
+	init_score(current);
 	if (current->name == 'a')
 		return (9);
 	else

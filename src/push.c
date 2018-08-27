@@ -15,4 +15,5 @@
 void	push(int temp, t_stack *current)
 {
 	current->s[current->top++] = temp;
+	init_score(current);
 }

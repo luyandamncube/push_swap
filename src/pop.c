@@ -18,5 +18,6 @@ int		pop(t_stack *current)
 
 	temp = current->s[current->top - 1];
 	current->top--;
+	init_score(current);
 	return (temp);
 }

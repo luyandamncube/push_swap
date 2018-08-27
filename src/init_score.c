@@ -19,7 +19,6 @@ void		init_score(t_stack *current)
 	int	score;
 
 	mid = current->top / 2;
-	printf("mid %d\n", mid);
 	k = 0;
 	score = 0;
 	while (k < current->top)

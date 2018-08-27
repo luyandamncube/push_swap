@@ -22,7 +22,10 @@ int		swap(t_stack *current)
 	push(temp1, current);
 	push(temp2, current);
 	if (current->name == 'a')
+	{
+		init_score(current);
 		return (1);
+	}
 	else
 		return (2);
 }

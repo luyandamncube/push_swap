@@ -21,19 +21,14 @@ int		rot(t_stack *current)
 	store = pop(current);
 	k = current->top;
 	initialize(&temp, 0);
-	while (k > 0)
-	{
+	while (k-- > 0)
 		temp->s[temp->top++] = pop(current);
-		k--;
-	}
 	push(store, current);
 	k = temp->top;
-	while (k > 0)
-	{
+	while (k-- > 0)
 		current->s[current->top++] = pop(temp);
-		k--;
-	}
 	free(temp);
+	init_score(current);
 	if (current->name == 'a')
 		return (6);
 	else

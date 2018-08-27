@@ -19,6 +19,7 @@ int		rot_both(t_stack *a, t_stack *b)
 
 	a_ret = rot(a);
 	b_ret = rot(b);
+	init_score(a);
 	if (a_ret && b_ret)
 		return (8);
 	else

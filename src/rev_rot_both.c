@@ -19,6 +19,7 @@ int		rev_rot_both(t_stack *a, t_stack *b)
 
 	a_ret = rev_rot(a);
 	b_ret = rev_rot(b);
+	init_score(a);
 	if (a_ret && b_ret)
 		return (11);
 	else
