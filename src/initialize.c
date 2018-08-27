@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:11:30 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/24 16:01:43 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/27 10:15:36 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ void		initialize(t_stack **new, int name)
 	(*new)->name = name;
 	(*new)->top = 0;
 	(*new)->s = malloc(4096);
+	(*new)->sa_score = malloc(4096);
+	(*new)->pb_score = malloc(4096);
 }

@@ -6,13 +6,13 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 12:03:13 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:53:22 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/27 09:07:22 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int            rev_rot_both(t_stack *a, t_stack *b)
+int		rev_rot_both(t_stack *a, t_stack *b)
 {
 	int a_ret;
 	int b_ret;

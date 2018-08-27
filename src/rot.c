@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:14:14 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:42:07 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/27 09:07:51 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int		rot(t_stack *current)
 	free(temp);
 	if (current->name == 'a')
 		return (6);
-	else	
+	else
 		return (7);
 }

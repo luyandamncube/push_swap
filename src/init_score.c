@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_duplicates.c                                 :+:      :+:    :+:   */
+/*   init_score.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/24 11:44:17 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/27 09:06:12 by lmncube          ###   ########.fr       */
+/*   Created: 2018/08/27 10:21:39 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/27 11:52:01 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+// 0 1 2 3 4 3 2 1 0 EVEN
+// 0 1 2 3 3 2 1 0 ODD
+void		init_score(t_stack *current)
+{	
+	int		mid;
 
-int		check_duplicates(t_stack *input)
-{
-	int		k[2];
-
-	k[0] = 0;
-	while (k[0] < input->top)
+	mid = current->top / 2;
+	if (current->top % 2) //EVEN
 	{
-		k[1] = k[0] + 1;
-		while (k[1] < input->top)
-		{
-			if (input->s[k[0]] == input->s[k[1]])
-				return (1);
-			k[1]++;
-		}
-		k[0]++;
+		while (k < 
 	}
-	return (0);
+
 }

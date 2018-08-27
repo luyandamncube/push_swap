@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_duplicates.c                                 :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/24 11:44:17 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/27 09:06:12 by lmncube          ###   ########.fr       */
+/*   Created: 2018/08/27 09:19:36 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/27 09:38:16 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		check_duplicates(t_stack *input)
+int		is_sorted(int *arr, int n)
 {
-	int		k[2];
-
-	k[0] = 0;
-	while (k[0] < input->top)
-	{
-		k[1] = k[0] + 1;
-		while (k[1] < input->top)
-		{
-			if (input->s[k[0]] == input->s[k[1]])
-				return (1);
-			k[1]++;
-		}
-		k[0]++;
-	}
-	return (0);
+	if (n == 1 || n == 0)
+		return (1);
+	if (arr[n - 1] < arr[n - 2])
+		return (0);
+	return (is_sorted(arr, n - 1));
 }

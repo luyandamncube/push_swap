@@ -6,16 +6,18 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:10:44 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 15:49:50 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/27 11:44:19 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	dump(t_stack *a, t_stack *b	)
+void		dump(t_stack *a, t_stack *b)
 {
 	int biggest;
+	int	k;
 
+	k = 0;
 	biggest = a->top > b->top ? a->top : b->top;
 	biggest--;
 	while (biggest > -1)

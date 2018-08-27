@@ -15,6 +15,7 @@ FILENAMES 	= check_duplicates.c \
 			  swap.c \
 			  swap_both.c \
 			  algo_1.c \
+			  is_sorted.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src
@@ -51,3 +52,6 @@ fclean: clean
 	@echo Done!
 re: fclean all
 
+norm: 
+	norminette ./src/
+	norminette ./includes/

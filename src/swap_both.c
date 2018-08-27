@@ -6,18 +6,18 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 12:29:15 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:32:44 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/27 09:08:31 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int             swap_both(t_stack *a, t_stack *b)
+int		swap_both(t_stack *a, t_stack *b)
 {
 	int		a_ret;
 	int		b_ret;
 
-	a_ret  = swap(a);
-	b_ret  = swap(b);
+	a_ret = swap(a);
+	b_ret = swap(b);
 	return (3);
 }
