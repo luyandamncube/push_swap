@@ -10,16 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// 0 1 2 3 4 3 2 1 0 EVEN
-// 0 1 2 3 3 2 1 0 ODD
+#include "push_swap.h"
+
 void		init_score(t_stack *current)
 {	
-	int		mid;
+	int	mid;
+	int	k;
+	int	score;
 
 	mid = current->top / 2;
-	if (current->top % 2) //EVEN
+	printf("mid %d\n", mid);
+	k = 0;
+	score = 0;
+	while (k < current->top)
 	{
-		while (k < 
+		current->sa_score[k] = score;
+		if (k < mid)
+			score++;
+		else if (current->top % 2 && k == mid)
+			score = score;
+		else	
+			score--;
+		k++;
 	}
-
 }

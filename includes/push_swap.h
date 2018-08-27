@@ -42,5 +42,5 @@ int				check_duplicates(t_stack *input);
 void			algo_1(t_stack *a, t_stack *b);
 //int				is_sorted(t_stack *current);
 int				is_sorted(int *arr, int n);
-
+void				init_score(t_stack *current);
 #endif
