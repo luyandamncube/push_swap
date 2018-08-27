@@ -14,10 +14,13 @@
 
 int		rev_rot_both(t_stack *a, t_stack *b)
 {
-	int a_ret;
-	int b_ret;
+	int	a_ret;
+	int	b_ret;
 
 	a_ret = rev_rot(a);
 	b_ret = rev_rot(b);
-	return (11);
+	if (a_ret && b_ret)
+		return (11);
+	else
+		return (-1);
 }

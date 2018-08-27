@@ -14,10 +14,12 @@
 
 void	algo_1(t_stack *a, t_stack *b)
 {
-
+	if (a->top == b->top)
+		printf("yes\n");
+/*
 	int		push_me;
 	int		temp;
-	/*char *instruction[] = 
+	char *instruction[] = 
 	{
 		"sa",
 		"sb",
@@ -30,7 +32,7 @@ void	algo_1(t_stack *a, t_stack *b)
 		"rra",
 		"rrb",
 		"rrr"
-	};*/
+	};
 	while (a->top)
 	{
 		temp = pop(a);
@@ -46,4 +48,5 @@ void	algo_1(t_stack *a, t_stack *b)
 		push_me = push_to(a, b);
 		//printf("%s\n", instruction[push_me]);
 	}
+	*/
 }

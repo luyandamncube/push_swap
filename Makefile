@@ -16,6 +16,7 @@ FILENAMES 	= check_duplicates.c \
 			  swap_both.c \
 			  algo_1.c \
 			  is_sorted.c \
+			  init_score.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src

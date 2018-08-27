@@ -16,10 +16,8 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		size;
 	int		k;
 
-	size = argc - 1;
 	k = 1;
 	initialize(&stack_a, 'a');	
 	initialize(&stack_b, 'b');	
@@ -42,8 +40,15 @@ int	main(int argc, char **argv)
 		else
 		{
 			//algo_1(stack_a, stack_b);
-			printf("rot a %d\n", rot(stack_a));
-			printf("elem 1 %d\n", stack_a->s[0]);
+			init_score(stack_a);
+			printf("score 0 %d\n", stack_a->sa_score[0]);
+			printf("score 1 %d\n", stack_a->sa_score[1]);
+			printf("score 2 %d\n", stack_a->sa_score[2]);
+			printf("score 3 %d\n", stack_a->sa_score[3]);
+			printf("score 4 %d\n", stack_a->sa_score[4]);
+			printf("score 5 %d\n", stack_a->sa_score[5]);
+			printf("score 6 %d\n", stack_a->sa_score[6]);
+			printf("score 7 %d\n", stack_a->sa_score[7]);
 			printf("sorted %d\n", is_sorted(stack_a->s, stack_a->top));
 			dump(stack_a, stack_b);
 		}

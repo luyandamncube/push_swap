@@ -19,5 +19,8 @@ int		swap_both(t_stack *a, t_stack *b)
 
 	a_ret = swap(a);
 	b_ret = swap(b);
-	return (3);
+	if (a_ret && b_ret)
+		return (3);
+	else
+		return (-1);
 }

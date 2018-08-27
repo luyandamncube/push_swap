@@ -15,9 +15,7 @@
 void		dump(t_stack *a, t_stack *b)
 {
 	int biggest;
-	int	k;
 
-	k = 0;
 	biggest = a->top > b->top ? a->top : b->top;
 	biggest--;
 	while (biggest > -1)
