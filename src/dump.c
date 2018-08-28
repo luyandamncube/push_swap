@@ -28,6 +28,8 @@ void		dump(t_stack *a, t_stack *b)
 	}
 	ft_putstr("\n");
 	ft_putstr("-\t\t-\n");
-	ft_putstr("\033[1;32;40ma\t\t");
-	ft_putstr("\033[1;31;40mb\n");
+	//ft_putstr("\033[1;32;40ma\t\t");
+	//ft_putstr("\033[1;31;40mb\n");
+	ft_putstr("a\t\t");
+	ft_putstr("b\n");
 }

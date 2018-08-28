@@ -16,7 +16,7 @@ int		is_sorted(int *arr, int n)
 {
 	if (n == 1 || n == 0)
 		return (1);
-	if (arr[n - 1] < arr[n - 2])
+	if (arr[n - 1] > arr[n - 2])
 		return (0);
 	return (is_sorted(arr, n - 1));
 }
