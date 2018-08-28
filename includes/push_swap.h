@@ -43,4 +43,7 @@ void			algo_1(t_stack *a, t_stack *b);
 //int				is_sorted(t_stack *current);
 int				is_sorted(int *arr, int n);
 void				init_score(t_stack *current);
+int				partition(int *arr, int l, int r);
+int				quick_select(int *arr, int l, int r, int k);
+
 #endif
