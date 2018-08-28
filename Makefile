@@ -17,6 +17,7 @@ FILENAMES 	= check_duplicates.c \
 			  algo_1.c \
 			  is_sorted.c \
 			  init_score.c \
+			  quick_select.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src
@@ -35,7 +36,7 @@ CFLAGS   	= -Wall -Werror -Wextra $(HFLAGS)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	make re -C $(LDIR)
+	@make -C $(LDIR)
 	@$(CC) -o $(@) $? $(HFLAGS) $(LFLAGS)
 	@echo "\033[1;32;40mDone making push_swap! \033[0m"
 $(ODIR)/%.o : $(SDIR)/%.c
@@ -48,7 +49,8 @@ clean:
 	@rm -rf $(ODIR)
 	@echo Done!
 fclean: clean
-	@echo removing library...
+	@make fclean -C $(LDIR) 
+	@echo removing binary...
 	@rm -f $(NAME)
 	@echo Done!
 re: fclean all
