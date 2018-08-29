@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:18:39 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:48:31 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/29 10:45:40 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int		rev_rot(t_stack *current)
 		current->s[current->top++] = pop(temp);
 	push(store, current);
 	free(temp);
-	init_score(current);
 	if (current->name == 'a')
 		return (9);
 	else

@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:22:22 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:27:43 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/29 10:46:16 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ int		swap(t_stack *current)
 	push(temp1, current);
 	push(temp2, current);
 	if (current->name == 'a')
-	{
-		init_score(current);
 		return (1);
-	}
 	else
 		return (2);
 }

@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:10:44 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/27 11:44:19 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/29 11:39:16 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ void		dump(t_stack *a, t_stack *b)
 	}
 	ft_putstr("\n");
 	ft_putstr("-\t\t-\n");
-	//ft_putstr("\033[1;32;40ma\t\t");
-	//ft_putstr("\033[1;31;40mb\n");
 	ft_putstr("a\t\t");
 	ft_putstr("b\n");
 }

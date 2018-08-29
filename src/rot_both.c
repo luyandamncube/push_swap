@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 12:00:22 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/26 12:46:05 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/29 10:48:08 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		rot_both(t_stack *a, t_stack *b)
 
 	a_ret = rot(a);
 	b_ret = rot(b);
-	init_score(a);
 	if (a_ret && b_ret)
 		return (8);
 	else

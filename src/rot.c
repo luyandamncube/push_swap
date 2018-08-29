@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:14:14 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/27 09:07:51 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/29 10:47:55 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int		rot(t_stack *current)
 	while (k-- > 0)
 		current->s[current->top++] = pop(temp);
 	free(temp);
-	init_score(current);
 	if (current->name == 'a')
 		return (6);
 	else
