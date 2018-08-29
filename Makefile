@@ -18,6 +18,7 @@ FILENAMES 	= check_duplicates.c \
 			  is_sorted.c \
 			  init_score.c \
 			  quick_select.c \
+			  set_bounds.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src
