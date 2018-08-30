@@ -36,19 +36,6 @@ void		algo_1(t_stack *a)
 
 void		algo_2(t_stack *a)
 {
-	int k[2];
-
-	k[0] = 0;
-	while (k[0] < 16)
-	{
-		printf(" %d\n", a->loops[k[0]]);
-		k[0]++;
-	}
-	printf("================================== \n");
-	k[0] = 0;
-	while (k[0] < 16)
-	{
-		printf(" %d\n", a->almost[k[0]]);
-		k[0]++;
-	}
+	printf("found arr %d\n", find_loops(a));
 }
+

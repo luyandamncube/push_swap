@@ -22,6 +22,8 @@ FILENAMES 	= check_duplicates.c \
 			  rot_silent.c \
 			  bubble_sort.c \
 			  gen_loops.c \
+			  find_loops.c \
+			  find_almost.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src
@@ -45,7 +47,7 @@ $(NAME) : $(OBJ)
 	@echo "\033[1;32;40mDone making push_swap! \033[0m"
 $(ODIR)/%.o : $(SDIR)/%.c
 	@mkdir -p $(ODIR)
-	@$(CC) $(CFLAGS) -o $@ -c $?
+	@$(CC) $(CFLAGS) -o $@ -c -lm $?
 
 clean:
 	@echo removing objects...

@@ -57,5 +57,6 @@ void			bubble_sort(int *arr, int size);
 void			insert_here(int *dest, int *src, int pos, int size);
 void			gen_loops(t_stack *current);
 void			gen_almost(t_stack *current);
-
+int			find_loops(t_stack *a);
+int			find_almost(t_stack *a);
 #endif
