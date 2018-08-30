@@ -12,26 +12,40 @@
 
 #include "push_swap.h"
 
-int		algo_1(t_stack *a, t_stack *b)
+const char *instruction[] = 
 {
-	const char *instruction[] = 
+	"none\n",
+	"sa\n",
+	"sb\n",
+	"ss\n",
+	"pa\n",
+	"pb\n",
+	"ra\n",
+	"rb\n",
+	"rr\n",
+	"rra\n",
+	"rrb\n",
+	"rrr\n"
+};
+
+/* where a->top == 2 */
+void		algo_1(t_stack *a)
+{
+	ft_putstr(instruction[swap(a)]);	
+}
+
+void		algo_2(t_stack *a)
+{
+	if (a->s[1] == a->low)
 	{
-		"none",
-		"sa",
-		"sb",
-		"ss",
-		"pa",
-		"pb",
-		"ra",
-		"rb",
-		"rr",
-		"rra",
-		"rrb",
-		"rrr"
-	};
-	if (is_sorted(a->s, a->top))
-		return (1);
-	ft_putstr(instruction[push_to(b,a)]);	
-	ft_putstr("\n");	
-	return (1);
+		if (a->s[0] < a->s[2])
+			ft_putstr(instruction[rot(a)]);
+		else
+			ft_putstr(instruction[swap(a)]);
+	}
+	else
+	{
+		ft_putstr(instruction[swap(a)]);
+		ft_putstr(instruction[rev_rot(a)]);
+	}
 }

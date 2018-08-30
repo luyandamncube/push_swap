@@ -19,6 +19,9 @@ FILENAMES 	= check_duplicates.c \
 			  init_score.c \
 			  quick_select.c \
 			  set_bounds.c \
+			  rot_silent.c \
+			  bubble_sort.c \
+			  gen_loops.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src

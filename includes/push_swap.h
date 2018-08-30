@@ -25,6 +25,8 @@ typedef	struct	s_stack
 	int			low;
 	int			top;
 	int			name;
+	int			*loops;
+	int			*almost;
 }				t_stack;
 
 void			initialize(t_stack **new, int name);
@@ -41,11 +43,15 @@ int				rev_rot(t_stack *current);
 int				rev_rot_both(t_stack *a, t_stack *b);
 void			free_all(t_stack **current);
 int				check_duplicates(t_stack *input);
-int				algo_1(t_stack *a, t_stack *b);
 int				is_sorted(int *arr, int n);
 void			init_score(t_stack *current);
 int				partition(int *arr, int l, int r);
 int				quick_select(int *arr, int l, int r, int k);
 void			set_bounds(t_stack *current);
-
+void				algo_1(t_stack *a);
+void				algo_2(t_stack *a);
+void				algo_3(t_stack *a);
+void				rot_silent(int *arr, int n);
+void				bubble_sort(int *arr, int size);
+void				gen_loops(t_stack *current);
 #endif

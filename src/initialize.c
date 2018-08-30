@@ -24,4 +24,11 @@ void		initialize(t_stack **new, int name)
 	(*new)->s = malloc(4096);
 	(*new)->sa_score = malloc(4096);
 	(*new)->pb_score = malloc(4096);
+	(*new)->loops = malloc(1000000);
+	(*new)->almost = malloc(1000000);
+	/*while (++row < 4096)
+	{
+		(*new)->loops[row] = malloc(4096);
+		(*new)->almost[row] = malloc(4096);
+	}*/
 }
