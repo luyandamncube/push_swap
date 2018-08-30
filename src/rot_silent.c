@@ -8,7 +8,7 @@ void	rot_silent(int *arr, int n)
 	temp = arr[0];
 	k = 0;
 	
-	while (k < n)
+	while (k < n - 1)
 	{
 		arr[k] = arr[k + 1];
 		k++;

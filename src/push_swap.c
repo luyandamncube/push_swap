@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/29 15:33:56 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/30 15:59:08 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,8 @@ int	main(int argc, char **argv)
 			init_score(stack_a);
 			set_bounds(stack_a);
 			gen_loops(stack_a);
-			printf("stacker %d \n", stack_a->loops[0]);
-			printf("stacker %d \n", stack_a->loops[1]);
-			printf("stacker %d \n", stack_a->loops[2]);
-			printf("stacker %d \n", stack_a->loops[3]);
-			printf("stacker %d \n", stack_a->loops[4]);
-			printf("stacker %d \n", stack_a->loops[5]);
-			printf("stacker %d \n", stack_a->loops[6]);
-			printf("stacker %d \n", stack_a->loops[7]);
-			printf("stacker %d \n", stack_a->loops[8]);
-			printf("stacker %d \n", stack_a->loops[9]);
-			printf("stacker %d \n", stack_a->loops[10]);
-			printf("stacker %d \n", stack_a->loops[11]);
+			gen_almost(stack_a);
+			algo_2(stack_a);
 			dump(stack_a, stack_b);
 			printf("sorted %d\n", is_sorted(stack_a->s, stack_a->top));
 		}

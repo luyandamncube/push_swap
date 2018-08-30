@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:12:25 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/29 16:19:46 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/30 16:12:09 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,19 @@ void		algo_1(t_stack *a)
 
 void		algo_2(t_stack *a)
 {
-	if (a->s[1] == a->low)
+	int k[2];
+
+	k[0] = 0;
+	while (k[0] < 16)
 	{
-		if (a->s[0] < a->s[2])
-			ft_putstr(instruction[rot(a)]);
-		else
-			ft_putstr(instruction[swap(a)]);
+		printf(" %d\n", a->loops[k[0]]);
+		k[0]++;
 	}
-	else
+	printf("================================== \n");
+	k[0] = 0;
+	while (k[0] < 16)
 	{
-		ft_putstr(instruction[swap(a)]);
-		ft_putstr(instruction[rev_rot(a)]);
+		printf(" %d\n", a->almost[k[0]]);
+		k[0]++;
 	}
 }
