@@ -59,4 +59,5 @@ void			gen_loops(t_stack *current);
 void			gen_almost(t_stack *current);
 int			find_loops(t_stack *a);
 int			find_almost(t_stack *a);
+void			rev_arr(int *arr, int len);
 #endif

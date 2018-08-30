@@ -24,6 +24,7 @@ FILENAMES 	= check_duplicates.c \
 			  gen_loops.c \
 			  find_loops.c \
 			  find_almost.c \
+			  rev_arr.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src

@@ -2,28 +2,24 @@
 
 int     find_loops(t_stack *a)
 {
-	int k[6];
+	int k[4];
 
-	k[0] = -1;
-	k[2] = 0;
+	k[0] = 0;
 	k[3] = a->top;
-	k[4] = k[3] * k[3] - k[3];
-	while (++k[0] < k[4])
+	rev_arr(a->loops, k[3] * k[3]);
+	while (k[0] < k[3])
 	{
-		if (a->loops[k[0]] == a->s[k[2]])
+		k[1] = 0;
+		k[2] = 0;
+		while (k[1] < k[3])
 		{
-			k[1] = -1;
-			while (++k[1] < k[3])
-			{
-				if (a->loops[k[0] + k[1]] == a->s[k[1]])
-				{
-					k[3]--;
-					if (k[3] == 0)
-						return (k[0]);
-				}
-			}
+			if (a->loops[k[0]*k[3] + k[1]] == a->s[k[1]])
+				k[2]++;
+			k[1]++;
 		}
+		if (k[2] == k[3])
+			return (1);
+		k[0]++;
 	}
 	return (-1);
 }
-

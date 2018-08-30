@@ -34,8 +34,10 @@ void		algo_1(t_stack *a)
 	ft_putstr(instruction[swap(a)]);	
 }
 
+/* where a->top > 2 */
 void		algo_2(t_stack *a)
 {
-	printf("found arr %d\n", find_loops(a));
+	printf("found loop %d\n", find_loops(a));
+	printf("found permutation %d\n", find_almost(a));
 }
 
