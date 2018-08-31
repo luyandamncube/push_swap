@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 11:54:11 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 16:21:08 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int				rev_rot(t_stack *current);
 int				rev_rot_both(t_stack *a, t_stack *b);
 void			free_all(t_stack **current);
 int				check_duplicates(t_stack *input);
-int				is_sorted(int *arr, int n);
+int				is_sorted(t_stack * current);
 void			init_score(t_stack *current);
 int				partition(int *arr, int l, int r);
 int				quick_select(int *arr, int l, int r, int k);

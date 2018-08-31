@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 10:59:12 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/30 16:25:47 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 13:17:52 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ void	gen_almost(t_stack *current)
 		mult += len;
 		k++;
 	}
-	rev_arr(current->almost, len * len);
+	//rev_arr(current->almost, len * len);
 }

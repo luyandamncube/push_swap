@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/30 15:59:08 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 16:21:24 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 		}
 		if (check_duplicates(stack_a))
 			ft_putstr("Error\n");
-		else if (!is_sorted(stack_a->s, stack_a->top))
+		else if (!is_sorted(stack_a))
 		{
 			init_score(stack_a);
 			set_bounds(stack_a);
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 			gen_almost(stack_a);
 			algo_2(stack_a);
 			dump(stack_a, stack_b);
-			printf("sorted %d\n", is_sorted(stack_a->s, stack_a->top));
+			printf("sorted %d\n", is_sorted(stack_a));
 		}
 	}
 	free(stack_a);

@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:12:25 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 11:58:00 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 16:24:43 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,30 @@ void		algo_1(t_stack *a)
 /* where a->top > 2 */
 void		algo_2(t_stack *a)
 {
-	printf("found loop %d\n", find_loops(a));
-	printf("found permutation %d\n", find_almost(a));
+	int k;
+	int flag;
 
-	while (!is_sorted(a))
+	k = 0 ;
+	flag = 0;
+	printf("found loop %d\n", is_loop(a));
+	printf("found permutation %d\n", is_almost(a));
+	while (is_sorted(a) == 0)
 	{
-		// if easiest
+		if (is_loop(a) && is_sorted(a) == 0)
+			ft_putstr(instruction[rot(a)]);	
+		else if (is_almost(a) && is_sorted(a) == 0)	
+			ft_putstr(instruction[swap(a)]);
+		else if ((!is_almost(a) || !is_loop(a)) && is_sorted(a) == 0)
+		{
+			if (k > 1  && flag == 0)
+			{
+				ft_putstr(instruction[swap(a)]);
+				flag++;
+			}
+			else
+				ft_putstr(instruction[rot(a)]);	
+		}
+		k++;
 	}
+	
 }
-

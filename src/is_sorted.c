@@ -6,17 +6,26 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 09:19:36 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/27 11:54:21 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 16:24:14 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		is_sorted(int *arr, int n)
+int		is_sorted(t_stack *current)
 {
-	if (n == 1 || n == 0)
-		return (1);
-	if (arr[n - 1] > arr[n - 2])
-		return (0);
-	return (is_sorted(arr, n - 1));
+	int k;
+
+	k = 0;
+    if (current->top == 0 || current->top == 1)
+        return (1);
+    while (k < current->top)
+	{
+        if (current->s[k] < current->s[k + 1])
+		{
+            return (0);
+		}
+		k++;
+	}
+    return (1);
 }
