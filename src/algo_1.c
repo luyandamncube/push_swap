@@ -31,36 +31,25 @@ const char *instruction[] =
 /* where a->top == 2 */
 void		algo_1(t_stack *a)
 {
-	ft_putstr(instruction[swap(a)]);	
+	if (!is_sorted(a))
+		ft_putstr(instruction[swap(a)]);	
 }
 
 /* where a->top > 2 */
 void		algo_2(t_stack *a)
 {
-	int k;
-	int flag;
-
-	k = 0 ;
-	flag = 0;
-	printf("found loop %d\n", is_loop(a));
-	printf("found permutation %d\n", is_almost(a));
-	while (is_sorted(a) == 0)
-	{
-		if (is_loop(a) && is_sorted(a) == 0)
-			ft_putstr(instruction[rot(a)]);	
-		else if (is_almost(a) && is_sorted(a) == 0)	
-			ft_putstr(instruction[swap(a)]);
-		else if ((!is_almost(a) || !is_loop(a)) && is_sorted(a) == 0)
-		{
-			if (k > 1  && flag == 0)
-			{
-				ft_putstr(instruction[swap(a)]);
-				flag++;
-			}
-			else
-				ft_putstr(instruction[rot(a)]);	
-		}
-		k++;
-	}
+	int adjust;
 	
+	adjust = 0;
+	if (!is_almost(a)  && !is_loop(a) && !adjust++)
+		ft_putstr(instruction[swap(a)]);
+	while (!is_sorted(a))
+	{
+		if (is_loop(a))	
+			ft_putstr(instruction[rot(a)]);
+		else if (is_almost(a))	
+			ft_putstr(instruction[swap(a)]);
+		else
+			ft_putstr(instruction[rot(a)]);
+	}
 }

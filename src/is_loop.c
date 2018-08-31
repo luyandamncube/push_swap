@@ -18,7 +18,6 @@ int		is_loop(t_stack *a)
 
 	k[0] = 0;
 	k[3] = a->top;
-	rev_arr(a->loops, k[3] * k[3]);
 	while (k[0] < k[3])
 	{
 		k[1] = 0;

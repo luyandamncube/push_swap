@@ -14,17 +14,17 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack	*a;
+	t_stack	*b;
 
-	initialize(&stack_a, 'a');	
-	initialize(&stack_b, 'b');	
+	initialize(&a, 'a');	
+	initialize(&b, 'b');	
 	if (argc > 1)
 	{
 		while (argc > 1)
 		{
 			if (ft_isnum(argv[argc -1]))
-				push(ft_atoi(argv[argc - 1]), stack_a);
+				push(ft_atoi(argv[argc - 1]), a);
 			else
 			{
 				ft_putstr("Error\n");
@@ -32,20 +32,22 @@ int	main(int argc, char **argv)
 			}
 			argc--;
 		}
-		if (check_duplicates(stack_a))
+		if (check_duplicates(a))
 			ft_putstr("Error\n");
-		else if (!is_sorted(stack_a))
+		else if (!is_sorted(a))
 		{
-			init_score(stack_a);
-			set_bounds(stack_a);
-			gen_loops(stack_a);
-			gen_almost(stack_a);
-			algo_2(stack_a);
-			dump(stack_a, stack_b);
-			printf("sorted %d\n", is_sorted(stack_a));
+			init_score(a);
+			set_bounds(a);
+			gen_loops(a);
+			gen_almost(a);
+			rev_arr(a->almost, (int)a->top * (int)a->top);
+			rev_arr(a->loops, (int)a->top * (int)a->top);
+			algo_2(a);
+			dump(a, b);
+			printf("sorted %d\n", is_sorted(a));
 		}
 	}
-	free(stack_a);
-	free(stack_b);
+	free(a);
+	free(b);
 	return (0);
 }
