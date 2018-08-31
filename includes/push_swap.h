@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/30 15:25:41 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 11:54:11 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ void			bubble_sort(int *arr, int size);
 void			insert_here(int *dest, int *src, int pos, int size);
 void			gen_loops(t_stack *current);
 void			gen_almost(t_stack *current);
-int			find_loops(t_stack *a);
-int			find_almost(t_stack *a);
+int				is_loop(t_stack *a);
+int				is_almost(t_stack *a);
 void			rev_arr(int *arr, int len);
+
 #endif

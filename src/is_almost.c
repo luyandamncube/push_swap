@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_to.c                                          :+:      :+:    :+:   */
+/*   is_almost.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/26 10:36:00 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 11:55:38 by lmncube          ###   ########.fr       */
+/*   Created: 2018/08/31 11:48:58 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/31 11:56:43 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		push_to(t_stack *dest, t_stack *src)
+int     is_almost(t_stack *a)
 {
-	int		temp;
+	int k[4];
 
-	temp = src->s[src->top - 1];
-	src->top--;
-	dest->s[dest->top] = temp;
-	dest->top++;
-	dest->name == 'a' ? set_bounds(dest) : set_bounds(src);
-	if (dest->name == 'a')
+	k[0] = 0;
+	k[3] = a->top;
+	rev_arr(a->almost, k[3] * k[3]);
+	while (k[0] < k[3])
 	{
-		init_score(dest);
-		return (4);
+		k[1] = 0;
+		k[2] = 0;
+		while (k[1] < k[3])
+		{
+			if (a->almost[k[0]*k[3] + k[1]] == a->s[k[1]])
+				k[2]++;
+			k[1]++;
+		}
+		if (k[2] == k[3])
+			return (1);
+		k[0]++;
 	}
-	else
-	{
-		init_score(src);
-		return (5);
-	}
+	return (-1);
 }

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int     find_almost(t_stack *a)
+int     is_almost(t_stack *a)
 {
 	int k[4];
 

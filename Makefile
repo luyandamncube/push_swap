@@ -22,8 +22,8 @@ FILENAMES 	= check_duplicates.c \
 			  rot_silent.c \
 			  bubble_sort.c \
 			  gen_loops.c \
-			  find_loops.c \
-			  find_almost.c \
+			  is_loop.c \
+			  is_almost.c \
 			  rev_arr.c \
 
 HDIR     	= ./includes

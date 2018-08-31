@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rev_arr.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/31 11:52:58 by lmncube           #+#    #+#             */
+/*   Updated: 2018/08/31 11:57:23 by lmncube          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    rev_arr(int *arr, int len)
+void		rev_arr(int *arr, int len)
 {
-	int k;
-	int m;
-	int     temp;
+	int		k;
+	int		m;
+	int		temp;
+
 	k = len - 1;
 	m = 0;
-	while(k > m)
+	while (k > m)
 	{
 		temp = arr[k];
 		arr[k] = arr[m];
@@ -16,4 +29,3 @@ void    rev_arr(int *arr, int len)
 		m++;
 	}
 }
-

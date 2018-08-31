@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:12:25 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/30 16:12:09 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/08/31 11:58:00 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,10 @@ void		algo_2(t_stack *a)
 {
 	printf("found loop %d\n", find_loops(a));
 	printf("found permutation %d\n", find_almost(a));
+
+	while (!is_sorted(a))
+	{
+		// if easiest
+	}
 }
 
