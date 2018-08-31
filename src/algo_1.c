@@ -41,13 +41,13 @@ void		algo_2(t_stack *a)
 	int adjust;
 	
 	adjust = 0;
-	if (!is_almost(a)  && !is_loop(a) && !adjust++)
-		ft_putstr(instruction[swap(a)]);
 	while (!is_sorted(a))
 	{
-		if (is_loop(a))	
+		if (!is_almost(a)  && !is_loop(a) && adjust++ < 2)
+			ft_putstr(instruction[swap(a)]);
+		if (is_loop(a))
 			ft_putstr(instruction[rot(a)]);
-		else if (is_almost(a))	
+		else if (is_almost(a))
 			ft_putstr(instruction[swap(a)]);
 		else
 			ft_putstr(instruction[rot(a)]);
