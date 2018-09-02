@@ -47,7 +47,25 @@ int	main(int argc, char **argv)
 			printf("sorted %d\n", is_sorted(a));
 		}
 	}
+	free(a->s);
+	free(a->sa_score);
+	free(a->pb_score);
+	free(a->loops);
+	free(a->almost);
+	free(b->s);
+	free(b->sa_score);
+	free(b->pb_score);
+	free(b->loops);
+	free(b->almost);
 	free(a);
 	free(b);
+	/*
+	free(a->top);
+	free(a->name);
+	free(a->top);
+	free(a->high);
+	free(a->low);
+*/
+
 	return (0);
 }

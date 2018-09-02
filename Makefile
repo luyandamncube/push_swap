@@ -48,7 +48,7 @@ $(NAME) : $(OBJ)
 	@echo "\033[1;32;40mDone making push_swap! \033[0m"
 $(ODIR)/%.o : $(SDIR)/%.c
 	@mkdir -p $(ODIR)
-	@$(CC) $(CFLAGS) -o $@ -c $?
+	@$(CC) $(CFLAGS) -o $@ -c -ggdb3 $?
 
 clean:
 	@echo removing objects...

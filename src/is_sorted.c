@@ -17,15 +17,13 @@ int		is_sorted(t_stack *current)
 	int k;
 
 	k = 0;
-    if (current->top == 0 || current->top == 1)
-        return (1);
-    while (k < current->top)
+	if (current->top == 0 || current->top == 1)
+		return (1);
+	while (k < current->top)
 	{
-        if (current->s[k] < current->s[k + 1])
-		{
-            return (0);
-		}
+		if (current->s[k] < current->s[k + 1])
+			return (0);
 		k++;
 	}
-    return (1);
+	return (1);
 }
