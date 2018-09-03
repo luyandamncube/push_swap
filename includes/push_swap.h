@@ -30,7 +30,6 @@ typedef	struct	s_stack
 	int			*almost;
 }				t_stack;
 
-void			initialize(t_stack **new, int name);
 int				pop(t_stack *current);
 int				swap(t_stack *current);
 int				swap_both(t_stack *a, t_stack *b);
@@ -42,7 +41,6 @@ int				rot(t_stack *current);
 int				rot_both(t_stack *a, t_stack *b);
 int				rev_rot(t_stack *current);
 int				rev_rot_both(t_stack *a, t_stack *b);
-void			free_all(t_stack **current);
 int				check_duplicates(t_stack *input);
 int				is_sorted(t_stack *current);
 void			init_score(t_stack *current);

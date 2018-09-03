@@ -1,7 +1,6 @@
 NAME		= push_swap
 FILENAMES 	= check_duplicates.c \
 			  dump.c \
-			  free_all.c \
 			  peek.c \
 			  pop.c \
 			  push.c \
