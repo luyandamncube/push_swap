@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/03 13:08:22 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 14:01:38 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ int				partition(int *arr, int l, int r);
 int				quick_select(int *arr, int l, int r, int k);
 void			set_bounds(t_stack *current);
 void			algo_1(t_stack *a);
-void			algo_2(t_stack *a);
-void			algo_3(t_stack *a);
 void			rot_silent(int *arr, int n);
 void			bubble_sort(int *arr, int size);
 void			insert_here(int *dest, int *src, int pos, int size);

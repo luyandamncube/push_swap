@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/03 12:52:51 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 14:01:15 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 			gen_almost(a);
 			rev_arr(a->almost, (int)a->top * (int)a->top);
 			rev_arr(a->loops, (int)a->top * (int)a->top);
-			algo_2(a);
+			algo_1(a);
 			dump(a, b);
 			printf("sorted %d\n", is_sorted(a));
 		}

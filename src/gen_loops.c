@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 10:59:12 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/03 13:14:02 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 14:04:45 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ void	gen_loops(t_stack *current)
 	int k;
 	int mult;
 	int len;
-	int *temp;
+	int temp[1000];
 
-	temp = malloc(1000);
 	k = 0;
 	mult = current->top;
 	len = current->top;
@@ -46,7 +45,6 @@ void	gen_loops(t_stack *current)
 		mult += len;
 		k++;
 	}
-	free(temp);
 }
 
 void	gen_almost(t_stack *current)

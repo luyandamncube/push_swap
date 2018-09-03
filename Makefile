@@ -13,7 +13,7 @@ FILENAMES 	= check_duplicates.c \
 			  rot_both.c \
 			  swap.c \
 			  swap_both.c \
-			  algo_1.c \
+			  algo.c \
 			  is_sorted.c \
 			  init_score.c \
 			  quick_select.c \
@@ -24,7 +24,6 @@ FILENAMES 	= check_duplicates.c \
 			  is_loop.c \
 			  is_almost.c \
 			  rev_arr.c \
-			  #initialize.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src
