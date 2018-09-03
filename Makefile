@@ -2,7 +2,6 @@ NAME		= push_swap
 FILENAMES 	= check_duplicates.c \
 			  dump.c \
 			  free_all.c \
-			  initialize.c \
 			  peek.c \
 			  pop.c \
 			  push.c \
@@ -25,6 +24,7 @@ FILENAMES 	= check_duplicates.c \
 			  is_loop.c \
 			  is_almost.c \
 			  rev_arr.c \
+			  #initialize.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src

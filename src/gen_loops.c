@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 10:59:12 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 13:17:52 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 13:14:02 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	insert_here(int *dest, int *src, int pos, int size)
 {
-	int  k;
+	int		k;
 
 	k = 0;
 	while (k < size)
@@ -22,7 +22,7 @@ void	insert_here(int *dest, int *src, int pos, int size)
 		dest[pos] = src[k];
 		pos++;
 		k++;
-	}	
+	}
 }
 
 void	gen_loops(t_stack *current)
@@ -39,15 +39,14 @@ void	gen_loops(t_stack *current)
 	ft_memcpy(current->loops, current->s, 500);
 	bubble_sort(current->loops, len);
 	ft_memcpy(temp, current->loops, 500);
-	while (k < len -1)
+	while (k < len - 1)
 	{
-		rot_silent(temp, current->top );
+		rot_silent(temp, current->top);
 		insert_here(current->loops, temp, mult, len);
 		mult += len;
 		k++;
 	}
 	free(temp);
-	//rev_arr(current->loops, len * len);
 }
 
 void	gen_almost(t_stack *current)
@@ -62,9 +61,8 @@ void	gen_almost(t_stack *current)
 	ft_memcpy(current->almost, current->loops, 1000);
 	while (k < len)
 	{
-		ft_arrswap(current->almost, mult, mult +1);	
+		ft_arrswap(current->almost, mult, mult + 1);
 		mult += len;
 		k++;
 	}
-	//rev_arr(current->almost, len * len);
 }

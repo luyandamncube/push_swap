@@ -6,13 +6,13 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/31 11:48:58 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 13:30:58 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 13:09:15 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int     is_almost(t_stack *a)
+int		is_almost(t_stack *a)
 {
 	int k[4];
 
@@ -24,7 +24,7 @@ int     is_almost(t_stack *a)
 		k[2] = 0;
 		while (k[1] < k[3])
 		{
-			if (a->almost[k[0]*k[3] + k[1]] == a->s[k[1]])
+			if (a->almost[k[0] * k[3] + k[1]] == a->s[k[1]])
 				k[2]++;
 			k[1]++;
 		}

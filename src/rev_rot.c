@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:18:39 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/29 10:45:40 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/03 13:15:30 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ int		rev_rot(t_stack *current)
 	int		k;
 
 	k = current->top;
-	initialize(&temp, 0);
+	temp = malloc(sizeof(t_stack));
+	temp->top = 0;
+	temp->s = malloc(500);
+	temp->sa_score = malloc(500);
 	while (k-- > 1)
 		temp->s[temp->top++] = pop(current);
 	store = pop(current);
@@ -27,6 +30,8 @@ int		rev_rot(t_stack *current)
 	while (k-- > 0)
 		current->s[current->top++] = pop(temp);
 	push(store, current);
+	free(temp->s);
+	free(temp->sa_score);
 	free(temp);
 	if (current->name == 'a')
 		return (9);
