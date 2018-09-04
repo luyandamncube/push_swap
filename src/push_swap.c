@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/04 15:42:26 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/04 15:46:54 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int			main(int argc, char **argv)
 		ft_putstr("Error\n");
 	else if (!is_sorted(a))
 		start_sort(a);
-	dump(a, b);
+	//dump(a, b);
 	free_all(&a, &b);
 	return (0);
 }
