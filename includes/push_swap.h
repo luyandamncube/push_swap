@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/03 14:01:38 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/04 15:31:00 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ typedef	struct	s_stack
 	int			*almost;
 }				t_stack;
 
+char			*instruction(int n);
+void			initialize(t_stack **a, t_stack **b);
+void			free_all(t_stack **a, t_stack **b);
 int				pop(t_stack *current);
 int				swap(t_stack *current);
 int				swap_both(t_stack *a, t_stack *b);

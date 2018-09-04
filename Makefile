@@ -1,10 +1,10 @@
-NAME		= push_swap
+PUSH		= push_swap
+CHECK		= checker
 FILENAMES 	= check_duplicates.c \
 			  dump.c \
 			  peek.c \
 			  pop.c \
 			  push.c \
-			  push_swap.c \
 			  push_to.c \
 			  rev_rot.c \
 			  rev_rot_both.c \
@@ -23,9 +23,12 @@ FILENAMES 	= check_duplicates.c \
 			  is_loop.c \
 			  is_almost.c \
 			  rev_arr.c \
+			  instruction.c \
+			  initialize.c \
+			  free_all.c \
 
 HDIR     	= ./includes
-SDIR     	= ./src
+SDIR     	= ./src/
 LDIR        = ./libft/
 ODIR     	= ./obj
 SRC      	= $(addprefix $(SDIR)/, $(FILENAMES))
@@ -38,15 +41,22 @@ HFLAGS   	= -I $(HDIR)
 LFLAGS      = -L $(LDIR) -lft
 CFLAGS   	= -Wall -Werror -Wextra $(HFLAGS)
 
-all : $(NAME)
+all : $(PUSH) $(CHECK)
 
-$(NAME) : $(OBJ)
+$(PUSH) : $(OBJ)
 	@make -C $(LDIR)
-	@$(CC) -o $(@) $? $(HFLAGS) $(LFLAGS)
+	@$(CC) -o $(@) ./obj/push_swap.o $? $(HFLAGS) $(LFLAGS)
 	@echo "\033[1;32;40mDone making push_swap! \033[0m"
+
+$(CHECK) : $(OBJ)
+	@$(CC) -o $(@) ./obj/checker.o $? $(HFLAGS) $(LFLAGS)
+	@echo "\033[1;32;40mDone making checker! \033[0m"
+
 $(ODIR)/%.o : $(SDIR)/%.c
 	@mkdir -p $(ODIR)
 	@$(CC) $(CFLAGS) -o $@ -c -ggdb3 $?
+	@$(CC) $(CFLAGS) -o ./obj/push_swap.o -c ./src/push_swap.c
+	@$(CC) $(CFLAGS) -o ./obj/checker.o -c ./src/checker.c
 
 clean:
 	@echo removing objects...
@@ -55,8 +65,9 @@ clean:
 	@echo Done!
 fclean: clean
 	@make fclean -C $(LDIR) 
-	@echo removing binary...
-	@rm -f $(NAME)
+	@echo removing binary files...
+	@rm -f $(PUSH)
+	@rm -f $(CHECK)
 	@echo Done!
 re: fclean all
 
