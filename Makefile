@@ -28,6 +28,7 @@ FILENAMES 	= check_duplicates.c \
 			  free_all.c \
 			  create_permutations.c \
 			  push_smallest.c \
+			  parser.c \
 
 HDIR     	= ./includes
 SDIR     	= ./src/

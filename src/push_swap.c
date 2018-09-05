@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 16:35:47 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 17:23:45 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,10 @@ int			main(int argc, char **argv)
 	t_stack	*b;
 
 	initialize(&a, &b);
-	while (argc > 1)
-	{
-		if (ft_isnum(argv[argc - 1]))
-			push(ft_atoi(argv[argc - 1]), a);
-		else
-		{
-			ft_putstr("Error\n");
-			exit(1);
-		}
-		argc--;
-	}
+	if (argc == 2)
+		parser_2(argv, a);
+	if (argc > 1)
+		parser_1(argc, argv, a);
 	if (check_duplicates(a))
 		ft_putstr("Error\n");
 	else if (!is_sorted(a))
