@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 15:22:25 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/04 15:30:01 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 13:37:56 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@ void	initialize(t_stack **a, t_stack **b)
 	(*a)->name = 'a';
 	(*b)->name = 'b';
 	(*a)->top = 0;
-	(*b)->top = 0;
+	(*a)->first = 0;
+	(*a)->second = 0;
+	(*a)->direction = 0;
+	(*a)->first_ = 0;
+	(*a)->second_ = 0;
 	(*a)->s = malloc(500);
 	(*b)->s = malloc(500);
 	(*a)->sa_score = malloc(500);
-	(*b)->sa_score = malloc(500);
-	(*a)->pb_score = malloc(500);
-	(*b)->pb_score = malloc(500);
 	(*a)->loops = malloc(100000);
-	(*b)->loops = malloc(100000);
 	(*a)->almost = malloc(100000);
-	(*b)->almost = malloc(100000);
 }

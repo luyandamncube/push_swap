@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/04 15:31:00 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 14:18:52 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,20 @@ typedef	struct	s_stack
 {
 	int			*s;
 	int			*sa_score;
-	int			*pb_score;
-	int			high;
-	int			low;
-	int			top;
-	int			name;
 	int			*loops;
 	int			*almost;
+	int			first;
+	int			second;
+	int			first_;
+	int			second_;
+	int			direction;
+	int			top;
+	int			name;
 }				t_stack;
 
 char			*instruction(int n);
+void			create_permutations(t_stack *a);
+void			push_smallest(t_stack *a, t_stack *b);
 void			initialize(t_stack **a, t_stack **b);
 void			free_all(t_stack **a, t_stack **b);
 int				pop(t_stack *current);
@@ -49,8 +53,9 @@ int				is_sorted(t_stack *current);
 void			init_score(t_stack *current);
 int				partition(int *arr, int l, int r);
 int				quick_select(int *arr, int l, int r, int k);
-void			set_bounds(t_stack *current);
+void			set_bounds(t_stack *a);
 void			algo_1(t_stack *a);
+void			algo_2(t_stack *a, t_stack *b);
 void			rot_silent(int *arr, int n);
 void			bubble_sort(int *arr, int size);
 void			insert_here(int *dest, int *src, int pos, int size);

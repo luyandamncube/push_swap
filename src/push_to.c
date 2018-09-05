@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 10:36:00 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/31 11:55:38 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 11:48:12 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int		push_to(t_stack *dest, t_stack *src)
 	src->top--;
 	dest->s[dest->top] = temp;
 	dest->top++;
-	dest->name == 'a' ? set_bounds(dest) : set_bounds(src);
 	if (dest->name == 'a')
 	{
 		init_score(dest);

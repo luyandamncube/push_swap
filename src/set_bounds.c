@@ -6,29 +6,32 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 15:15:09 by lmncube           #+#    #+#             */
-/*   Updated: 2018/08/29 15:29:07 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 13:40:25 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	set_bounds(t_stack *current)
+void	set_bounds(t_stack *a)
 {
-	int high;
-	int low;
-	int	k;
+	int k[5];
 
-	high = MAXNEG;
-	low = MAXPOS;
-	k = 0;
-	while (k < current->top)
-	{
-		if (current->s[k] >= high)
-			high = current->s[k];
-		if (current->s[k] <= low)
-			low = current->s[k];
-		k++;
-	}
-	current->low = low;
-	current->high = high;
+	a->first_ = MAXPOS;
+	a->second_ = MAXPOS;
+    k[4] = -1;
+    while (++k[4] < a->top)
+    {
+        if (a->s[k[4]] < a->first_)
+        {
+            a->second_ = a->first_;
+            a->second = k[4];
+            a->first_ = a->s[k[4]];
+            a->first = k[4];
+        }
+        else if (a->s[k[4]] < a->second_ && a->s[k[4]] != a->first_)
+        {
+            a->second = k[4];
+            a->second_ = a->s[k[4]];
+        }
+    }
 }

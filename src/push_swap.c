@@ -6,21 +6,18 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/04 15:46:54 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 14:58:02 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		start_sort(t_stack *a)
+void		start_sort(t_stack *a, t_stack *b)
 {
-	init_score(a);
-	set_bounds(a);
-	gen_loops(a);
-	gen_almost(a);
-	rev_arr(a->almost, (int)a->top * (int)a->top);
-	rev_arr(a->loops, (int)a->top * (int)a->top);
-	algo_1(a);
+	if (a->top < 5)
+		algo_1(a);
+	else if (a->top < 9)
+		algo_2(a, b);
 }
 
 int			main(int argc, char **argv)
@@ -43,8 +40,8 @@ int			main(int argc, char **argv)
 	if (check_duplicates(a))
 		ft_putstr("Error\n");
 	else if (!is_sorted(a))
-		start_sort(a);
-	//dump(a, b);
+		start_sort(a, b);
+	dump(a, b);
 	free_all(&a, &b);
 	return (0);
 }
