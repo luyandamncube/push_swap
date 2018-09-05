@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:08:57 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/04 15:41:49 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 15:09:48 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,15 @@ void		do_instruction(int choice, t_stack *a, t_stack *b)
 		instructions = rev_rot_both(a, b);
 }
 
+void		print_error(t_stack *a)
+{
+	if (is_sorted(a))
+		ft_putstr("OK\n");
+	else
+		ft_putstr("Error\n");
+	exit(1);
+}
+
 int			main(int argc, char **argv)
 {
 	int		k;
@@ -96,13 +105,8 @@ int			main(int argc, char **argv)
 		if (check_instruction(ret))
 			do_instruction(check_instruction(ret), a, b);
 		else
-		{
-			if (is_sorted(a))
-				ft_putstr("OK\n");
-			else
-				ft_putstr("Error\n");
-			exit(1);
-		}
+			print_error(a);
 	}
+	free_all(a , b);
 	return (0);
 }

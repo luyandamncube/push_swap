@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 14:03:34 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 14:47:55 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 15:05:33 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ void	algo_2(t_stack *a, t_stack *b)
 		push_smallest(a, b);
 	algo_1(a);
 	while (b->top > 0)
-		push_to(a , b);
+		push_to(a, b);
 }
