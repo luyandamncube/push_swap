@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:08:57 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 15:09:48 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 15:11:54 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,6 @@ int			main(int argc, char **argv)
 		else
 			print_error(a);
 	}
-	free_all(a , b);
+	free_all(&a , &b);
 	return (0);
 }

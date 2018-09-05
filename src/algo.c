@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 14:03:34 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 15:05:33 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/05 16:40:57 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,7 @@ void	algo_1(t_stack *a)
 
 void	algo_2(t_stack *a, t_stack *b)
 {
-	int		mid;
-
-	mid = a->top / 2;
-	printf("mid %d\n", mid);
-	while (a->top - 1 > mid)
+	while (a->top - 1 > 2)
 		push_smallest(a, b);
 	algo_1(a);
 	while (b->top > 0)
