@@ -43,5 +43,5 @@ void	algo_2(t_stack *a, t_stack *b)
 		push_smallest(a, b);
 	algo_1(a);
 	while (b->top > 0)
-		push_to(a, b);
+		ft_putstr(instruction(push_to(a, b)));
 }
