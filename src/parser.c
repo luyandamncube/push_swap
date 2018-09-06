@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 16:53:30 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/06 08:54:02 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/06 12:20:59 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,26 @@ void	parser_1(int argc, char **argv, t_stack *a)
 
 void	parser_2(char **argv, t_stack *a)
 {
-	char 	**split;
-	int 	k;
+	char	**split;
+	int		k;
 
 	split = ft_strsplit(argv[1], ' ');
 	k = 0;
 	while (split[k])
 		k++;
-	k--;	
+	k--;
 	while (k > -1)
 	{
 		if (ft_isnum(split[k]))
-		{
 			push(ft_atoi(split[k]), a);
-		}
 		else
 		{
 			ft_putstr("Error\n");
 			exit(1);
 		}
+		if (k > 0)
+			free(split[k]);
 		k--;
 	}
+	free(split);
 }

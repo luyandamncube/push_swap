@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:08:57 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 15:11:54 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/06 10:43:45 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,45 +68,42 @@ void		do_instruction(int choice, t_stack *a, t_stack *b)
 		instructions = rev_rot_both(a, b);
 }
 
-void		print_error(t_stack *a)
+void		print_error(void)
 {
-	if (is_sorted(a))
-		ft_putstr("OK\n");
-	else
-		ft_putstr("Error\n");
+	ft_putstr("Error\n");
+	exit(1);
+}
+
+void		print_success(void)
+{
+	ft_putstr("OK\n");
 	exit(1);
 }
 
 int			main(int argc, char **argv)
 {
-	int		k;
-	int		fd;
 	char	*ret;
 	t_stack	*a;
 	t_stack	*b;
 
-	k = 0;
-	fd = 0;
 	initialize(&a, &b);
-	while (argc > 1)
-	{
-		if (ft_isnum(argv[argc - 1]))
-			push(ft_atoi(argv[argc - 1]), a);
-		else
-		{
-			ft_putstr("Error\n");
-			exit(1);
-		}
-		argc--;
-	}
+	if (argc == 2)
+		parser_2(argv, a);
+	if (argc > 2)
+		parser_1(argc, argv, a);
+	if (check_duplicates(a) || argc == 1)
+		print_error();
 	while (1)
 	{
-		get_next_line(fd, &ret);
+		get_next_line(0, &ret);
 		if (check_instruction(ret))
 			do_instruction(check_instruction(ret), a, b);
+		else if (is_sorted(a))
+			print_success();
 		else
-			print_error(a);
+			print_error();
 	}
-	free_all(&a , &b);
+	free_all(&a, &b);
+	free(ret);
 	return (0);
 }
