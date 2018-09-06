@@ -65,6 +65,8 @@ void		do_instruction(int choice, t_stack *a, t_stack *b)
 		rev_rot(b);
 	else if (choice == 11)
 		rev_rot_both(a, b);
+	if (a->debug)
+		dump(a, b);
 }
 
 void		print_error(void)
@@ -79,6 +81,12 @@ void		print_success(void)
 	exit(1);
 }
 
+void		print_unsorted(void)
+{
+	ft_putstr("KO\n");
+	exit(1);
+}
+
 int			main(int argc, char **argv)
 {
 	char	*ret;
@@ -88,6 +96,8 @@ int			main(int argc, char **argv)
 	initialize(&a, &b);
 	if (!parser(argc, argv, a))
 		print_error();
+	if (a->debug)
+		dump (a, b);
 	while (1)
 	{
 		get_next_line(0, &ret);
@@ -95,13 +105,10 @@ int			main(int argc, char **argv)
 			do_instruction(check_instruction(ret), a, b);
 		else if (!check_instruction(ret) && !is_sorted(a))
 			print_error();
-		else if (is_sorted(a))
+		else if (is_sorted(a) && b->top == 0)
 			print_success();
 		else
-		{
-			ft_putstr("KO\n");
-			exit(1);
-		}
+			print_unsorted();
 	}	
 	free_all(&a, &b);
 	free(ret);
