@@ -30,6 +30,8 @@ typedef	struct	s_stack
 	int			direction;
 	int			top;
 	int			name;
+	int			debug;
+	int			color;
 }				t_stack;
 
 char			*instruction(int n);
@@ -64,7 +66,8 @@ void			gen_almost(t_stack *current);
 int				is_loop(t_stack *a);
 int				is_almost(t_stack *a);
 void			rev_arr(int *arr, int len);
-void			parser_1(int argc, char **argv, t_stack *a);
-void			parser_2(char **argv, t_stack *a);
+int     		parser(int argc, char **argv, t_stack *a);	
+int			parser_1(int argc, char **argv, t_stack *a);
+int			parser_2(char **argv, t_stack *a);
 
 #endif

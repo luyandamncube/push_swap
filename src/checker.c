@@ -42,30 +42,29 @@ int			check_instruction(char *str)
 
 void		do_instruction(int choice, t_stack *a, t_stack *b)
 {
-	int instructions;
 
 	if (choice == 1)
-		instructions = swap(a);
+		swap(a);
 	else if (choice == 2)
-		instructions = swap(b);
+		swap(b);
 	else if (choice == 3)
-		instructions = swap_both(a, b);
+		swap_both(a, b);
 	else if (choice == 4)
-		instructions = push_to(a, b);
+		push_to(a, b);
 	else if (choice == 5)
-		instructions = push_to(b, a);
+		push_to(b, a);
 	else if (choice == 6)
-		instructions = rot(a);
+		rot(a);
 	else if (choice == 7)
-		instructions = rot(b);
+		rot(b);
 	else if (choice == 8)
-		instructions = rot_both(a, b);
+		rot_both(a, b);
 	else if (choice == 9)
-		instructions = rev_rot(a);
+		rev_rot(a);
 	else if (choice == 10)
-		instructions = rev_rot(b);
+		rev_rot(b);
 	else if (choice == 11)
-		instructions = rev_rot_both(a, b);
+		rev_rot_both(a, b);
 }
 
 void		print_error(void)
@@ -87,22 +86,23 @@ int			main(int argc, char **argv)
 	t_stack	*b;
 
 	initialize(&a, &b);
-	if (argc == 2)
-		parser_2(argv, a);
-	if (argc > 2)
-		parser_1(argc, argv, a);
-	if (check_duplicates(a) || argc == 1)
+	if (!parser(argc, argv, a))
 		print_error();
 	while (1)
 	{
 		get_next_line(0, &ret);
 		if (check_instruction(ret))
 			do_instruction(check_instruction(ret), a, b);
+		else if (!check_instruction(ret) && !is_sorted(a))
+			print_error();
 		else if (is_sorted(a))
 			print_success();
 		else
-			print_error();
-	}
+		{
+			ft_putstr("KO\n");
+			exit(1);
+		}
+	}	
 	free_all(&a, &b);
 	free(ret);
 	return (0);
