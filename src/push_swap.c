@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:23:06 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 17:23:45 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/06 08:43:31 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			main(int argc, char **argv)
 	initialize(&a, &b);
 	if (argc == 2)
 		parser_2(argv, a);
-	if (argc > 1)
+	if (argc > 2)
 		parser_1(argc, argv, a);
 	if (check_duplicates(a))
 		ft_putstr("Error\n");
