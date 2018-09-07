@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 16:53:30 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/06 12:20:59 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 12:04:30 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	parser(int argc, char **argv, t_stack *a)
 {
 	int error_1;
 	int error_2;
-	
+
 	if (argc == 1)
 		return (0);
 	if (argc == 2)

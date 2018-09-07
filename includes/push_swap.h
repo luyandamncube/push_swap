@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/05 17:17:23 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 12:06:49 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,11 @@ void			gen_almost(t_stack *current);
 int				is_loop(t_stack *a);
 int				is_almost(t_stack *a);
 void			rev_arr(int *arr, int len);
-int     		parser(int argc, char **argv, t_stack *a);	
-int			parser_1(int argc, char **argv, t_stack *a);
-int			parser_2(char **argv, t_stack *a);
+int				parser(int argc, char **argv, t_stack *a);
+int				parser_1(int argc, char **argv, t_stack *a);
+int				parser_2(char **argv, t_stack *a);
+void			print_error(void);
+void			print_unsorted(void);
+void			print_succes(void);
 
 #endif

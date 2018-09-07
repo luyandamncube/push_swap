@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:08:57 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/06 10:43:45 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 12:06:25 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int			check_instruction(char *str)
 
 void		do_instruction(int choice, t_stack *a, t_stack *b)
 {
-
 	if (choice == 1)
 		swap(a);
 	else if (choice == 2)
@@ -69,24 +68,6 @@ void		do_instruction(int choice, t_stack *a, t_stack *b)
 		dump(a, b);
 }
 
-void		print_error(void)
-{
-	ft_putstr("Error\n");
-	exit(1);
-}
-
-void		print_success(void)
-{
-	ft_putstr("OK\n");
-	exit(1);
-}
-
-void		print_unsorted(void)
-{
-	ft_putstr("KO\n");
-	exit(1);
-}
-
 int			main(int argc, char **argv)
 {
 	char	*ret;
@@ -97,7 +78,7 @@ int			main(int argc, char **argv)
 	if (!parser(argc, argv, a))
 		print_error();
 	if (a->debug)
-		dump (a, b);
+		dump(a, b);
 	while (1)
 	{
 		get_next_line(0, &ret);
@@ -109,7 +90,7 @@ int			main(int argc, char **argv)
 			print_success();
 		else
 			print_unsorted();
-	}	
+	}
 	free_all(&a, &b);
 	free(ret);
 	return (0);
