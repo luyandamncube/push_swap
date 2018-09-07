@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 11:07:55 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/07 12:06:49 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 14:37:53 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void			create_permutations(t_stack *a);
 void			push_smallest(t_stack *a, t_stack *b);
 void			initialize(t_stack **a, t_stack **b);
 void			free_all(t_stack **a, t_stack **b);
+void			free_all_ret(t_stack **a, t_stack **b, char **ret);
 int				pop(t_stack *current);
 int				swap(t_stack *current);
 int				swap_both(t_stack *a, t_stack *b);
@@ -71,6 +72,6 @@ int				parser_1(int argc, char **argv, t_stack *a);
 int				parser_2(char **argv, t_stack *a);
 void			print_error(void);
 void			print_unsorted(void);
-void			print_succes(void);
+void			print_success(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 11:08:57 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/07 12:06:25 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 14:37:14 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ int			main(int argc, char **argv)
 	initialize(&a, &b);
 	if (!parser(argc, argv, a))
 		print_error();
+	if (check_duplicates(a))
+		print_error();
 	if (a->debug)
 		dump(a, b);
 	while (1)
@@ -91,7 +93,6 @@ int			main(int argc, char **argv)
 		else
 			print_unsorted();
 	}
-	free_all(&a, &b);
-	free(ret);
+	free_all_ret(&a, &b, &ret);
 	return (0);
 }

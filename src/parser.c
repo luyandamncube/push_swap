@@ -6,7 +6,7 @@
 /*   By: lmncube <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 16:53:30 by lmncube           #+#    #+#             */
-/*   Updated: 2018/09/07 12:04:30 by lmncube          ###   ########.fr       */
+/*   Updated: 2018/09/07 15:34:43 by lmncube          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int	parser(int argc, char **argv, t_stack *a)
 	int error_1;
 	int error_2;
 
-	if (argc == 1)
-		return (0);
 	if (argc == 2)
 		error_1 = parser_2(argv, a);
 	else
 		error_2 = parser_1(argc, argv, a);
+	if (argc == 1)
+		return (0);
 	if (error_1 == 0 || error_2 == 0)
 		return (0);
 	return (1);
@@ -61,10 +61,12 @@ int	parser_2(char **argv, t_stack *a)
 			a->debug = 1;
 		else
 			return (0);
-		if (k > 0)
-			free(split[k]);
 		k--;
 	}
+	k = -1;
+	while (++k < a->top)
+		free(split[k]);
+	free(split[k]);
 	free(split);
 	return (1);
 }

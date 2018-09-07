@@ -66,6 +66,8 @@ clean:
 	@echo removing objects...
 	@rm -f $(OBJ)
 	@rm -rf $(ODIR)
+	@rm -rf checker.dSYM/
+	@rm -rf push_swap.dSYM/
 	@echo Done!
 fclean: clean
 	@make fclean -C $(LDIR) 
