@@ -7,7 +7,7 @@
 ![wethinkcode_ logo](resources/wtc.gif)
 
 ## push_swap
-![final mark](resources/filler-finalmark.png)
+![final mark](resources/push_swap-finalmark.png.png)
 
 Algorithms I Project
 
